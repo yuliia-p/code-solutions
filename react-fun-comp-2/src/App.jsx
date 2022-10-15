@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { myPeople } from './data';
 
 export default function MyPicCarousel() {
+
   const [index, setIndex] = useState(0);
 
   function handleClickNext() {
@@ -10,7 +11,6 @@ export default function MyPicCarousel() {
     } else {
       setIndex(index + 1);
     }
-    console.log('index', index);
   }
 
   function handleClickPrev() {
@@ -20,37 +20,24 @@ export default function MyPicCarousel() {
     } else {
       setIndex(index - 1);
     }
-    console.log('index', index);
   }
 
   const person = myPeople[index];
 
   return (
     <div className="container">
-      <h1>Hello</h1>
+      <h1>My sketches</h1>
       <div className="flex">
         <img
           src={`../img/${person.name}.png`}
           alt={person.name}
         />
+        <p>This is
+          <span style={{ color: person.color }} > {person.name}</span>
+        </p>
       </div>
       <button onClick={handleClickNext}>Back</button>
       <button onClick={handleClickPrev}>Next</button>
     </div >
   );
 }
-
-// function List() {
-//   const listItems = myPeople.map(person =>
-//     <li key={person.id}>
-//       <img
-//         src={`../img/${person.name}.png`}
-//         alt={person.name}
-//       />
-//       <p>
-//         <b>{person.name}</b>
-//       </p>
-//     </li>
-//   );
-//   return <ul>{listItems}</ul>;
-// }
