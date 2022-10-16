@@ -12,19 +12,17 @@ export default function MyPicCarousel() {
     } else {
       setIndex(index + 1);
     }
-
   }
 
   function handleClickPrev() {
     clearInterval(intervalId);
-
     if (index === 0) {
       setIndex(myPeople.length - 1);
       console.log('myPeople.length', myPeople.length);
     } else {
       setIndex(index - 1);
     }
-  }
+    }
   const intervalId = setInterval(handleClickNext, 3000);
   const person = myPeople[index];
 
@@ -32,10 +30,7 @@ export default function MyPicCarousel() {
     <div className="container">
       <h1>My sketches</h1>
       <div className="flex">
-        <img
-          src={`../img/${person.name}.png`}
-          alt={person.name}
-        />
+        <img src={`../img/${person.name}.png`} alt={person.name} />
         <p>This is
           <span style={{ color: person.color }} > {person.name}</span>
         </p>
