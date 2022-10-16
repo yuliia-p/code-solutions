@@ -7,22 +7,13 @@ export default function MyPicCarousel() {
 
   function handleClickNext() {
     clearInterval(intervalId);
-    if (index === myPeople.length - 1) {
-      setIndex(0);
-    } else {
-      setIndex(index + 1);
-    }
+    index === myPeople.length - 1 ? setIndex(0) : setIndex(index + 1);
   }
 
   function handleClickPrev() {
     clearInterval(intervalId);
-    if (index === 0) {
-      setIndex(myPeople.length - 1);
-      console.log('myPeople.length', myPeople.length);
-    } else {
-      setIndex(index - 1);
-    }
-    }
+    index === 0 ? setIndex(myPeople.length - 1) : setIndex(index - 1);
+  }
   const intervalId = setInterval(handleClickNext, 3000);
   const person = myPeople[index];
 
