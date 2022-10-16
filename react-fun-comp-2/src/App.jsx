@@ -6,7 +6,7 @@ export default function MyPicCarousel() {
   const [index, setIndex] = useState(0);
 
   function handleClickNext() {
-    // clearInterval(intervalId);
+    clearInterval(intervalId);
     if (index === myPeople.length - 1) {
       setIndex(0);
     } else {
@@ -16,7 +16,7 @@ export default function MyPicCarousel() {
   }
 
   function handleClickPrev() {
-    // clearInterval(intervalId);
+    clearInterval(intervalId);
 
     if (index === 0) {
       setIndex(myPeople.length - 1);
@@ -25,7 +25,7 @@ export default function MyPicCarousel() {
       setIndex(index - 1);
     }
   }
-  // intervalId = setInterval(handleClickNext, 3000);
+  const intervalId = setInterval(handleClickNext, 3000);
   const person = myPeople[index];
 
   return (
@@ -40,8 +40,8 @@ export default function MyPicCarousel() {
           <span style={{ color: person.color }} > {person.name}</span>
         </p>
       </div>
-      <button onClick={handleClickNext}>Back</button>
-      <button onClick={handleClickPrev}>Next</button>
+      <i onClick={handleClickNext} className="fa fa-thin fa-arrow-left"></i>
+      <i onClick={handleClickPrev} className="fa fa-thin fa-arrow-right"></i>
     </div >
   );
 }

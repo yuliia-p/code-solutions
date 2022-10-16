@@ -19,8 +19,8 @@ export const myPeople = [
   },
   {
     id: 2,
-    name: 'Linda',
-    url: '../img/Linda.png',
+    name: 'Patricia',
+    url: '../img/Patricia.png',
     color: 'aquamarine'
   },
   {
@@ -40,5 +40,17 @@ export const myPeople = [
     name: 'Missy',
     url: '../img/Missy.png',
     color: 'darkslateblue'
+  },
+  {
+    id: 7,
+    name: 'Nora',
+    url: '../img/Nora.png',
+    color: 'brown'
+  },
+  {
+    id: 8,
+    name: 'Stacy',
+    url: '../img/Stacy.png',
+    color: 'green'
   }
 ];
