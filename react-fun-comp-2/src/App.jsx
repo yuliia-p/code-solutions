@@ -39,9 +39,12 @@ export default function MyPicCarousel() {
         <p>This is
           <span style={{ color: person.color }} > {person.name}</span>
         </p>
+        <p>
+          ({index + 1} of {myPeople.length})
+        </p>
       </div>
-      <i onClick={handleClickNext} className="fa fa-thin fa-arrow-left"></i>
-      <i onClick={handleClickPrev} className="fa fa-thin fa-arrow-right"></i>
+      <i onClick={handleClickPrev} className="fa fa-thin fa-arrow-left"></i>
+      <i onClick={handleClickNext} className="fa fa-thin fa-arrow-right"></i>
     </div >
   );
 }
