@@ -13,7 +13,7 @@ Users should be able to:
 
 ### Screenshot
 <p align="middle">
-<img src="./images/desktop-view.png" width="200">
+<img src="./images/desktop-view.png" width="800">
 </p>
 <p align="middle">
 <img src="./images/mobile-view.png" width="200">
@@ -29,4 +29,4 @@ Users should be able to:
 
 ## Author
 
-- LinkediIn - [@yourusername](https://www.linkedin.com/in/yuliia-pch/)
+- LinkediIn - [@Yuliia Pchelintseva](https://www.linkedin.com/in/yuliia-pch/)
