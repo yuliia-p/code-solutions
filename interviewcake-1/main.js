@@ -1,5 +1,8 @@
 /*
 Write a function that takes an array of characters and reverses the letters in place.
+An in-place function modifies data structures or objects outside of its own stack frame
+(i.e.: stored on the process heap or in the stack frame of a calling function). Because
+of this, the changes made by the function remain after the call completes.
 */
 
 function reverse(arrayOfChars) {
