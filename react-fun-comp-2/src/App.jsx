@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { myPeople } from './data';
 
 export default function MyPicCarousel() {
-
   const [index, setIndex] = useState(0);
 
   function handleClickNext() {
@@ -20,15 +19,13 @@ export default function MyPicCarousel() {
   return (
     <div className="container">
       <h1>My sketches</h1>
-      <div className="flex">
-        <img src={`../img/${person.name}.png`} alt={person.name} />
-        <p>This is
-          <span style={{ color: person.color }} > {person.name}</span>
-        </p>
-        <p>
-          ({index + 1} of {myPeople.length})
-        </p>
-      </div>
+      <img src={`../img/${person.name}.png`} alt={person.name} />
+      <p>This is
+        <span style={{ color: person.color }} > {person.name}</span>
+      </p>
+      <p>
+        ({index + 1} of {myPeople.length})
+      </p>
       <i onClick={handleClickPrev} className="fa fa-thin fa-arrow-left"></i>
       <i onClick={handleClickNext} className="fa fa-thin fa-arrow-right"></i>
     </div >
