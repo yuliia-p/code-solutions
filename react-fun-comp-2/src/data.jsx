@@ -52,5 +52,23 @@ export const myPeople = [
     name: 'Stacy',
     url: '../img/Stacy.png',
     color: 'green'
+  },
+  {
+    id: 9,
+    name: 'Sarah',
+    url: '../img/Sarah.png',
+    color: 'navy'
+  },
+  {
+    id: 10,
+    name: 'Christina',
+    url: '../img/Christina.png',
+    color: 'green'
+  },
+  {
+    id: 11,
+    name: 'Amelia',
+    url: '../img/Amelia.png',
+    color: 'brown'
   }
 ];
