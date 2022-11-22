@@ -18,11 +18,10 @@ function solution(inputString) {
 
   for (let i = 0; i < 4; i++) {
     if (isNaN(toArr[i]) || parseInt(toArr[i]) > 255 || parseInt(toArr[i]) < 0 || toArr[i] === '' || (toArr[i].length > 1 && toArr[i][0] === '0')) {
-      console.log(toArr[i]);
-      console.log(typeof toArr[i]);
       return false;
     }
   }
+  // return toArr.length===4&&toArr.every(element => element !== ""&&!isNaN(element)&&element>=0&&element<256)
   return true;
 }
 solution('0.254.255.0');
