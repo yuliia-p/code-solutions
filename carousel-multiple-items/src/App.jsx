@@ -4,11 +4,23 @@ import { myPeople } from './data';
 
 const App = () => {
   return (
-    <div style={{ maxWidth: 1200, marginLeft: 'auto', marginRight: 'auto', marginTop: 100 }}>
-      <MyPicCarousel show={3}>
-        {MyImg(myPeople)}
-      </MyPicCarousel>
-    </div>
+    <>
+      <h1>My sketches</h1>
+      <div className='mobile-view'>
+        <div style={{ maxWidth: 1200, marginLeft: 'auto', marginRight: 'auto', marginTop: 50 }}>
+          <MyPicCarousel show={2}>
+            {MyImg(myPeople)}
+          </MyPicCarousel>
+        </div>
+      </div>
+      <div className='desktop-view'>
+        <div style={{ maxWidth: 1200, marginLeft: 'auto', marginRight: 'auto', marginTop: 100 }}>
+          <MyPicCarousel show={3}>
+            {MyImg(myPeople)}
+          </MyPicCarousel>
+        </div>
+      </div>
+    </>
   );
 };
 
