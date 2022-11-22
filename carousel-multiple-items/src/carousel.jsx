@@ -46,7 +46,7 @@ export default function MyPicCarousel(props) {
   return (
     <div className="carousel-container">
       <div
-      className="carousel-wrapper">
+        className="carousel-wrapper">
         {
           currentIndex > 0 &&
           <i onClick={prev} className="fa fa-chevron-left"></i>

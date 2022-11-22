@@ -71,15 +71,34 @@ img {
   width: calc(100% / 4);
 }
 
-@media screen and (min-width: 740px) {
-  img {
-    width: 300px;
-  }
-}
-
-@media (hover: none) and (pointer: coarse) {
+/* @media (hover: none) and (pointer: coarse) {
   .fa-chevron-right,
   .fa-chevron-left {
     display: none;
+  }
+} */
+.mobile-view {
+  display: contents;
+}
+
+.desktop-view {
+  display: none;
+}
+
+@media screen and (min-width: 740px) {
+  .desktop-view {
+    display: contents;
+  }
+
+  .mobile-view {
+    display: none;
+  }
+
+  .carousel-container {
+    position: relative;
+  }
+
+  img {
+    width: 300px;
   }
 }
