@@ -31,7 +31,7 @@ function MyImg(props) {
     return (
       <div key={img.id}>
         <div style={{ padding: 8 }}>
-          <img src={img.url} alt="Josh" />
+          <img src={img.url} alt={img.name} />
           <p style={{ color: `${img.color}` }}>{img.name}</p>
         </div>
       </div>
