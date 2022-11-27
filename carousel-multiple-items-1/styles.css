@@ -1,0 +1,42 @@
+.container {
+  margin-top: 5rem;
+}
+
+.img {
+  max-width: 25%;
+  border-radius: 50%;
+  padding: 0 5px;
+}
+
+.display-none {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.align-center {
+  align-items: center;
+  text-align: center;
+}
+
+.fa-solid {
+  margin: 0.3rem;
+  color: lightgray;
+  font-size: 0.8rem;
+}
+
+.current {
+  color: black;
+}
+
+.fa-chevron-right,
+.fa-chevron-left {
+  font-size: 2rem;
+  color: black;
+}
+
+.content {
+  justify-content: center;
+}
