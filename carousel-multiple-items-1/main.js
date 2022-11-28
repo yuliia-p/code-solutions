@@ -3,10 +3,12 @@ const dotContEl = document.querySelector('.dots'); // dot container
 const iElements = document.querySelectorAll('.fa-circle'); // all dots NodeList
 const imgEls = document.querySelectorAll('.img'); // img node list
 const lefttArrow = document.querySelector('.fa-chevron-left');
+const contentDiv = document.querySelector('.content');
 let currentIndex = 0;
 const length = imgEls.length;
 let intervalId = null;
-// const show = 4;
+const show = 4;
+
 console.log('imgEls', imgEls);
 console.log('lefttArrow', lefttArrow);
 console.log('length', length);
@@ -44,7 +46,7 @@ function prev(e) {
 // 1 2 3 4 5 -> length
 function next(event) {
   clearInterval(intervalId);
-  if (currentIndex === length - 1) {
+  if (currentIndex < (length - show)) {
     // jump back to 0
     imgEls[currentIndex].className = 'img display-none';
     imgEls[0].className = 'img';
@@ -62,7 +64,21 @@ function next(event) {
   intervalId = setInterval(next, 3000);
 }
 
-intervalId = setInterval(next, 3000);
-function clickOnDot(e) {
-
+function clickOnDot(event) {
+  if (event.target.tagName === 'I') {
+    // clear interval
+    clearInterval(intervalId);
+    var buttonId = event.target.getAttribute('data-icon'); // 1-12; id of i el
+    var newIndex = buttonId - 1;
+    imgEls[currentIndex].className = 'img display-none';
+    imgEls[newIndex].className = 'img';
+    iElements[currentIndex].className = 'fa-solid fa-circle';
+    iElements[newIndex].className = 'fa-solid fa-circle current';
+    currentIndex = newIndex;
+  }
+  // set up a new one
+  intervalId = setInterval(next, 3000);
 }
+
+intervalId = setInterval(next, 3000);
+contentDiv.style.transform = `translateX(-${currentIndex * (100 / show)}%)`;
