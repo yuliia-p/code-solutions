@@ -3,11 +3,9 @@ const dotContEl = document.querySelector('.dots'); // dot container
 const iElements = document.querySelectorAll('.fa-circle'); // all dots NodeList
 const imgEls = document.querySelectorAll('.img'); // img node list
 const lefttArrow = document.querySelector('.fa-chevron-left');
-const contentDiv = document.querySelector('.content');
 let currentIndex = 0;
 const length = imgEls.length;
 let intervalId = null;
-const show = 4;
 
 console.log('imgEls', imgEls);
 console.log('lefttArrow', lefttArrow);
@@ -46,7 +44,7 @@ function prev(e) {
 // 1 2 3 4 5 -> length
 function next(event) {
   clearInterval(intervalId);
-  if (currentIndex < (length - show)) {
+  if (currentIndex === length - 1) {
     // jump back to 0
     imgEls[currentIndex].className = 'img display-none';
     imgEls[0].className = 'img';
@@ -81,4 +79,3 @@ function clickOnDot(event) {
 }
 
 intervalId = setInterval(next, 3000);
-contentDiv.style.transform = `translateX(-${currentIndex * (100 / show)}%)`;
