@@ -23,3 +23,22 @@ function solution(year) {
   return Math.ceil(year / 100);
 }
 solution(1905);
+
+function maxNum(array) {
+  let max = array[0];
+  for (let i = 1; i < array.length; i++) {
+    if (max < array[i]) {
+      max = array[i];
+    }
+  }
+  return max;
+}
+maxNum([0, 4, 66, 85, 8]);
+
+function maxNumWithSort(array) {
+  const sortedArray = array.sort((a, b) => {
+    return a - b;
+  });
+  return sortedArray[sortedArray.length - 1];
+}
+maxNumWithSort([-98, 14, 6, 15, 8, 0, -5]);
