@@ -1,17 +1,8 @@
 function elevator(left, right, call) {
   // code on! :)
-  if (call === left && call === right) return 'right';
-  if (call === left) return 'left';
-  if (call === right) return 'right';
-
-  const diffLeft = call - left; // -2
-  const diffRight = call - right; // -1
-  // 2,1,0
-  if (diffLeft < diffRight) {
-    return 'left';
-  } else {
-    return 'right';
-  }
+  const diffLeft = Math.abs(call - left); // -2
+  const diffRight = Math.abs(call - right); // -1
+  return diffLeft < diffRight ? 'left' : 'right';
 }
 elevator(0, 1, 0);
 elevator(0, 1, 1);
