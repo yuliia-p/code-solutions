@@ -9,6 +9,9 @@ Return a new array consisting of elements which are multiple of their own index 
 function multipleOfIndex(array) {
   return array.filter((num, i) => num % i === 0);
 }
+
+// const multipleOfIndex = a => a.filter((n, i) => n % i === 0);
+
 // function multipleOfIndex(array) {
 //   const newArray = [];
 //   array.map((x, index) => {
