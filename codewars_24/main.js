@@ -1,12 +1,7 @@
-function oddCount(n) {
-  //   let count = 0;
-  //   for (let i = n; i > 1; i--) {
-  //     if(i % 2 !== 0) {
-  //       count++;
-  //     }
-  //     }
-  //   return count
-  // }
-  return Math.floor(n / 2);
+/* eslint-disable no-unused-vars */
+function distanceBetweenPoints(a, b) {
+  const x = a.x - b.x;
+  const y = a.y - b.y;
+  return Math.sqrt(x * x + y * y);
 }
-oddCount(15023);
+distanceBetweenPoints();
