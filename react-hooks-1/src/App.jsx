@@ -22,7 +22,8 @@ export default function Moods() {
     backgroundColor: color,
     padding: '1.5rem 3rem',
     borderRadius: '15px',
-    fontSize: '2rem'
+    fontSize: '2rem',
+    border: 'none'
 
   }}>
     I am so {mood}
