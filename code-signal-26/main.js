@@ -27,15 +27,15 @@ function solution(name) {
   return true;
 }
 
-function isDigit(c) {
-  return '0123456789'.indexOf(c) !== -1;
+function isDigit(el) {
+  return '0123456789'.indexOf(el) !== -1;
 }
 
-function isUnderscore(c) {
-  return '_'.indexOf(c) !== -1;
+function isUnderscore(el) {
+  return '_'.indexOf(el) !== -1;
 }
 
-function isLetter(c) {
-  return c.toLowerCase() !== c.toUpperCase();
+function isLetter(el) {
+  return el.toLowerCase() !== el.toUpperCase();
 }
 solution('var_1__Int');
