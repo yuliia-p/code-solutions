@@ -17,8 +17,12 @@ solution(name) = false.
 function solution(name) {
   const array = name.split('');
   for (let i = 0; i < array.length; i++) {
-    if (i === 0 && isDigit(array[i])) { return false; }
-    if (!(isDigit(array[i]) || isLetter(array[i]) || isUnderscore(array[i]))) { return false; }
+    if (i === 0 && isDigit(array[i])) {
+      return false;
+    }
+    if (!(isDigit(array[i]) || isLetter(array[i]) || isUnderscore(array[i]))) {
+      return false;
+    }
   }
   return true;
 }
