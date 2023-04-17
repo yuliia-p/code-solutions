@@ -133,3 +133,72 @@ function getNewResult() {
 
 ReactDOM.render(<ResultDisplay getNewResult={getNewResult} />, document.getElementById('root'));
 */
+
+/*
+The FilterDuplicates function takes an array data as input and returns
+an array containing the values of data without the duplicates.
+It does this by creating a new Set object to keep track of the values
+that have already been seen, and an empty result array to store the unique values.
+
+Then, it iterates through each item in the data array using a for...of loop,
+and checks if the seen set already contains the item. If it does not, the
+item is added to the seen set using the add method, and also pushed onto
+the result array using the push method.
+
+Finally, the result array is returned, which contains only the unique values of the
+data array in their original order.
+
+You can use this function like this:
+*/
+
+function FilterDuplicates(data) {
+  const seen = new Set();
+  const result = [];
+
+  for (const item of data) {
+    if (!seen.has(item)) {
+      seen.add(item);
+      result.push(item);
+    }
+  }
+
+  return result;
+}
+
+const data = [7, 6, 4, 3, 3, 4, 9];
+const filteredData = FilterDuplicates(data);
+console.log(filteredData); // [7, 6, 4, 3, 9]
+
+/*
+
+The computeClosestrozero function takes an array of temperatures ts as input and
+returns the temperature closest to 0. If the array is empty, the function returns 0.
+If two temperatures are equally close to zero, the positive temperature is returned.
+*/
+
+function computeClosestrozero(ts) {
+  // check if the ts array is empty
+  if (ts.length === 0) {
+    return 0;
+  }
+  // initializ a variable closest to the first temperature in the array
+  let closest = ts[0];
+
+  // compare each temperature to the current closest temperature
+  for (let i = 1; i < ts.length; i++) {
+    const current = ts[i];
+    // for each temperature, it calculates its absolute value using the Math.abs function,
+    // and checks if it is closer to 0 than the current closest temperature.
+
+    if (Math.abs(current) < Math.abs(closest) || (Math.abs(current) === Math.abs(closest) && current > closest)) {
+
+      // If it is, it replaces the closest variable with the current temperature.
+      closest = current;
+    }
+  }
+
+  return closest;
+}
+const temperatures = [-5, 2, 3, -1, 5, -4];
+const closestTemperature = computeClosestrozero(temperatures);
+console.log(closestTemperature); // -1
