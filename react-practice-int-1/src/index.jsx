@@ -1,9 +1,6 @@
+import Counter from './components/App';
+import ReactDOM from 'react-dom/client';
 import React from 'react';
-import ReactDOM from 'react-dom';
 
-function CustomButton(props) {
-  return <button>Click Me!</button>;
-}
-const root = ReactDOM.createRoot(document.getElementById('root'));
-const element = <CustomButton />;
-root.render(element);
+const root = ReactDOM.createRoot(document.querySelector('#root'));
+root.render(<Counter />);
