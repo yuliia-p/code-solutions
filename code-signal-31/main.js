@@ -1,21 +1,23 @@
 /*
-Given two cells on the standard chess board, determine whether they have the same color or not.
+Consider integer numbers from 0 to n - 1 written down along the circle
+in such a way that the distance between any two neighboring numbers is equal (note that 0 and n - 1 are neighboring, too).
+
+Given n and firstNumber, find the number which is written
+in the radially opposite position to firstNumber.
 
 Example
 
-For cell1 = "A1" and cell2 = "C3", the output should be
-solution(cell1, cell2) = true.
+For n = 10 and firstNumber = 2, the output should be
+solution(n, firstNumber) = 7.
 */
 
-function solution(cell1, cell2) {
-  const row1 = parseInt(cell1[1]);
-  const col1 = cell1.charCodeAt(0) - 'A'.charCodeAt(0) + 1;
-  const row2 = parseInt(cell2[1]);
-  const col2 = cell2.charCodeAt(0) - 'A'.charCodeAt(0) + 1;
+function solution(n, firstNumber) {
+  // Calculate the opposite position by adding half of n and taking modulo n
+  // This works because the circle is symmetric and the opposite position is exactly halfway around
+  const oppositePosition = (firstNumber + Math.floor(n / 2)) % n;
 
-  return (row1 + col1) % 2 === (row2 + col2) % 2;
+  return oppositePosition;
 }
-
-const cell1 = 'A1';
-const cell2 = 'C3';
-console.log(solution(cell1, cell2));
+solution(6, 3);
+console.log(solution(6, 3));
+console.log(solution(18, 6));
